@@ -3,19 +3,21 @@
 #### 风险提示：程序有BUG，食用需谨慎
 ##### 今日诗词：
 
-![今日诗词](https://v2.jinrishici.com/one.svg)
+![今日诗词](https://v2.jinrishici.com/one.svg?font-size=20&spacing=2&color=white)
 <html>
-<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-<div id="poem_sentence"></div>
-<div id="poem_info"></div>
-<script type="text/javascript">
-  jinrishici.load(function(result) {
+  <body>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <div id="poem_sentence"></div>
+    <div id="poem_info"></div>
+    <script type="text/javascript">
+    jinrishici.load(function(result) {
     var sentence = document.querySelector("#poem_sentence")
     var info = document.querySelector("#poem_info")
     sentence.innerHTML = result.data.content
     info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
   });
-</script>
+    </script>
+</body>
 </html>
 
 ###### 食用指南
